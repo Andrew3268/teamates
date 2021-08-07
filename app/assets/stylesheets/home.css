@@ -1,0 +1,6 @@
+header{margin-bottom:50px;}
+header nav{height:60px;border-bottom:1px solid #ccc;}
+header ul{padding:20px;}
+header ul li{float:left;margin-right:30px;}
+header ul li a{}
+header ul img.profile_img{width:40px;margin:-15px;}

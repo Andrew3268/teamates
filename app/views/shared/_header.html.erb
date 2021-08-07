@@ -1,0 +1,21 @@
+<header>
+  <nav class="clearfix">
+    <ul>
+      <li><a href="#n">여기는 메뉴1</a></li>
+      <li><a href="#n">여기는 메뉴2</a></li>
+      <li><a href="#n">여기는 메뉴3</a></li>
+      <li><a href="#n">여기는 메뉴4</a></li>
+      
+      <% if user_signed_in? %>
+        <li><a href="users/sign_out" data-method="delete">로그아웃</a></li>
+        <% if current_user.profile.attached? %>
+          <img src="<%= url_for(current_user.profile) %>" alt="프로필 이미지" class="profile_img" />
+        <% else %>
+          <img src="https://picsum.photos/200" alt="프로필 이미지 없음" class="profile_img" />
+        <% end %>
+      <% else %>
+        <li><a href="users/sign_up">로그인/회원가입</a></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
