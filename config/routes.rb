@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :teams, except: [:index] #index페이지를 사용하지 않을 경우 except: [:index]를 사용하면 라우트 주소에서 배제된다.
   root 'home#index'
   
   devise_for :admin_users, ActiveAdmin::Devise.config

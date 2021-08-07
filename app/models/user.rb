@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_one_attached :profile
 
   enum status: ["no_status", "job_searching", "job_offering", "on_working"]
+
+  has_many :teams, dependent: :destroy
 end
