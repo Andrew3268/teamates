@@ -6,6 +6,7 @@ ActiveAdmin.register User do
     column :email
     column :name
     column :status
+    column :details
     column :profile do |user|
       if user.profile.attached?
         image_tag url_for(user.profile), class: "small_image"
@@ -18,10 +19,10 @@ ActiveAdmin.register User do
   filter :email
 
   scope :all, default: true
-  scope :no_status
-  scope :job_searching
-  scope :job_offering
-  scope :on_working
+  scope :no_status_status
+  scope :job_searching_status
+  scope :job_offering_status
+  scope :on_working_status
 
 
   # See permitted parameters documentation:

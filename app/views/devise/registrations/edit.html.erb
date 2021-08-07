@@ -31,13 +31,45 @@
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile %><br />
+    <%= f.file_field :profile %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.select :status, User.statuses.keys %>
+  </div>
+
+  <div class="field">
+    <%= f.label :region %><br />
+    <%= f.select :region, User.regions.keys %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.select :role, User.roles.keys %>
+  </div>
+
+  <div class="field">
+    <%= f.label :detail_list %><br />
+    <%= f.text_area :detail_list %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<% if false %> <!-- 이걸로 감싸면 출력이 안됨 -->
+  <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
+  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> 
+<% end %>
 <%= link_to "Back", :back %>

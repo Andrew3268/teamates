@@ -36,6 +36,16 @@
     <%= f.select :status, User.statuses.keys %>
   </div>
 
+  <div class="field">
+    <%= f.label :region %><br />
+    <%= f.select :region, User.regions.keys %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.select :role, User.roles.keys %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

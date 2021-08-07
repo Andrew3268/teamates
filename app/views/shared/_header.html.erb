@@ -12,7 +12,8 @@
           <li><a href="/teams/<%= team.id %>"><%= team.name %></a></li>
         <% end %>
 
-        <li><a href="users/sign_out" data-method="delete">로그아웃</a></li>
+        <li><a href="users/edit">개인정보 수정</a></li> 
+        <li><a href="users/sign_out" data-method="delete">로그아웃</a></li> 
 
         <% if current_user.profile.attached? %>
           <img src="<%= url_for(current_user.profile) %>" alt="프로필 이미지" class="profile_img" />
@@ -26,4 +27,4 @@
       <% end %>
     </ul>
   </nav>
-</header>
+</header> 
