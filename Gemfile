@@ -8,6 +8,7 @@ gem 'any_login'
 gem 'activeadmin'
 gem 'jquery-rails'
 gem 'acts-as-taggable-on', '~> 7.0'
+gem 'simple_form'
 
 
 
